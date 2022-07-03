@@ -42,13 +42,13 @@ function WantJob(props) {
           <input className="chinput" type="text" onChange={handleChange} name="name" placeholder="Name" required={true}/>
           <input className="chinput" type="tel" onChange={handleChange} maxLength={10} name="phone" placeholder="Phone Number" required={true}/>
           <input className="chinput" type="number" onChange={handleChange} maxlength="10" name="zipcode" placeholder="Zip Code" required={true}/>
-          <input className="chinput" type="text" onChange={handleChange} name="place" placeholder="place" required={true}/>
+          <input className="chinput" type="text" onChange={handleChange} name="place" placeholder="Place/Address" required={true}/>
           <input className="btn-primary" type="button"value={'Submit'} onClick={handleSubmit} required={true} />
         </form>
       </div>
       <span className="wrong togglewant"> <i onClick={props.setZero} className="fas fa-times"></i></span>
       <hr/>
-      <h5 className="text-center"></h5>
+      {/* <h5 className="text-center"></h5> */}
     </div>
     </>
   )

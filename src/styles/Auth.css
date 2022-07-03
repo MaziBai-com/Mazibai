@@ -293,3 +293,13 @@
 .googleLogin{
   border: 1px solid #333;
 }
+
+.passwordBox{
+  position: relative;
+}
+.eyeIcon{
+  position: absolute;
+  right: 20px;
+  color: blue;
+  cursor: pointer;
+}

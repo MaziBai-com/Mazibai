@@ -1,7 +1,7 @@
 import React , {useEffect , useState} from 'react'
 import "../../styles/testimonial.css"
 function CustomerTestimonial() {
-    const [number , setnumber ] = useState(0); 
+    const [number , setnumber ] = useState(0);
     const reviews = [
         {
             img:'https://mazibai.herokuapp.com/uploads/user/default_image.png',
@@ -23,23 +23,23 @@ function CustomerTestimonial() {
             name:'Mrs. Vanita (a proud Garden Owner)',
             review:'I can\'t see my garden getting dry during summer, just because of my hectic work. So I hired a gardener from MaziBai.com to keep my garden green, clean and weed-free. Thanks a lot for your eco-friendly services at low prices.'
         },
-    ]    
+    ]
     const increase = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         if(number===reviews.length-1){
-            setnumber(0); 
+            setnumber(0);
         }
         else{
-            setnumber(number+1); 
+            setnumber(number+1);
         }
     }
     const decrease = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         if(number===0){
-            setnumber(reviews.length-1); 
+            setnumber(reviews.length-1);
         }
         else{
-            setnumber(number-1); 
+            setnumber(number-1);
         }
     }
 
@@ -49,7 +49,7 @@ function CustomerTestimonial() {
   <div className="rectangle22"></div>
   <div className="slideshow-container5">
 
-    <h1>Here's what <span>others</span> say:</h1>
+    <h1>Here's what <span>People</span> say:</h1>
 
     {
         reviews.map((review , index) => {

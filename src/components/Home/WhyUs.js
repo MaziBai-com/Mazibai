@@ -17,7 +17,7 @@ function WhyUs() {
     <div className="break2 container-fluid text-center">
       <div className="tableBox ">
         <div className="tableContent ">
-          <table border="0" cellSpacing="5" cellPadding="10" align="center">
+          <table border="0" cellSpacing="4" cellPadding="8" align="center">
             <tbody>
 
             <tr>

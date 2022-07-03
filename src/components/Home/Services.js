@@ -1,13 +1,14 @@
 import React , {useMemo} from 'react'
-import bg1 from "../../images/bg1.jpg"
-import bg2 from "../../images/bg2.jpg"
-import mothercare from "../../images/mothercare.jpg"
-import paint from "../../images/paint.jpg"
-import gardener from "../../images/gardener.jpg"
-import house from "../../images/house.jpg"
-import cloths from "../../images/cloths.jpg"
-import officeboy from "../../images/officeworker.jpg"
-import nurse from "../../images/nurse.jpg"
+
+import bg1 from "../../images/undraw_chef_cu-0-r.svg"
+import bg2 from "../../images/undraw_cooking_lyxy.svg"
+import mothercare from "../../images/undraw_motherhood_re_pk2m.svg"
+import paint from "../../images/undraw_add_color_re_buro.svg"
+import gardener from "../../images/undraw_gardening_re_e658.svg"
+import house from "../../images/undraw_interior_design_re_7mvn.svg"
+import cloths from "../../images/undraw_takeout_boxes_ap54.svg"
+import officeboy from "../../images/undraw_coffee_break_h3uu.svg"
+import nurse from "../../images/undraw_medical_care_movn.svg"
 
 import {Link} from "react-router-dom"
 
@@ -81,7 +82,7 @@ function Services() {
                 <div className="postcard__bar"></div>
                 <div className="postcard__preview-txt">{item.desc}</div>
                 <ul className="postcard__tagbox">
-                    <Link to={"/book"} className="tag__item"><i className="fas fa-tag mr-2"></i>Hire Us</Link>
+                    <Link to={"/book"} className="tag__item"><i className="fas fa-tag mr-2"></i>Book Now</Link>
                 </ul>
               </div>
             </article>

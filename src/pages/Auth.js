@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { GoogleLogin } from "react-google-login";
-import { useNavigate , Link, NavLink } from 'react-router-dom'
+import { useNavigate , Link } from 'react-router-dom'
 import AuthContext from "../Context/AuthContext";
 import FrontImg from '../images/frontImg.jpg'
 import BackImg from '../images/backImg.jpg'
@@ -14,7 +14,7 @@ function Auth() {
     const [registerEmail, setRegisterEmail] = useState('')
     const [registerPassword, setRegisterPassword] = useState('')
     const [name , setname  ] = useState('')
-
+    const [showPass , setShowPass] = useState(false); 
     const handleLogin = async (e) => {
         e.preventDefault(); 
         let data =  await Login(loginEmail , loginPassword); 
@@ -42,7 +42,7 @@ function Auth() {
 
     const responseSuccessGoogle = async (response) => {
         console.log(response); 
-        const details = await fetch('http://localhost:5000/api/auth/user/googlelogin',{
+        const details = await fetch('https://mazibai.herokuapp.com/api/auth/user/googlelogin',{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'
@@ -62,13 +62,15 @@ function Auth() {
     }
    
     const responseFailureGoogle = () => {
+        seterror('Something Went Wrong');
+        handleError(); 
     }
     
     return (
         <React.Fragment>
             <section className="fold">
                 <div className="container-login">
-                    <Link to={'/'}><i className='fas fa-arrow-left'></i>Back</Link>
+                    <Link to={'/'}><i className='fas fa-arrow-left'></i>Home</Link>
                     <input type="checkbox" id="flip" />
                     <div className="cover">
                         <div className="front">
@@ -97,22 +99,16 @@ function Auth() {
                                             <i className="fas fa-envelope"></i>
                                             <input type="text" placeholder="Enter your email" onChange={(e)=>setLoginEmail(e.target.value)} required={true} />
                                         </div>
-                                        <div className="input-box">
+                                        <div className="input-box passwordBox">
                                             <i className="fas fa-lock"></i>
-                                            <input type="password" placeholder="Enter your password" onChange={(e)=>setLoginPassword(e.target.value)} required={true} />
+                                            <input type={showPass ? 'text' :'password'} placeholder="Enter your password" onChange={(e)=>setLoginPassword(e.target.value)} required={true} />
+                                            <i className={showPass ? 'fa fa-eye eyeIcon' : 'fa fa-eye-slash eyeIcon'} onClick={()=>{setShowPass(!showPass)}}></i>
                                         </div>
-                                        <div className="text"><Link to="/forgotpassword" >Forgot password?</Link></div>
+                                        {/* <div className="text"><Link to="/forgotpassword" >Forgot password?</Link></div> */}
                                         <div className="button input-box">
                                             <input type="button" value="Submit" onClick={handleLogin} />
                                         </div>
                                         <div className="socialBox googleButtonContainer">
-                                            {/* <GoogleLogin className="input-box googleLogin"
-                                                clientId="746130167111-n7o5qnpn9gns3m0nf75dk72tfton7239.apps.googleusercontent.com"
-                                                buttonText="Continue with Google"
-                                                onSuccess={responseSuccessGoogle}
-                                                onFailure={responseFailureGoogle}
-                                                cookiePolicy={'single_host_origin'}
-                                            />, */}
                                             <GoogleLogin  className="googleLogin input-box"
                                                 clientId="746130167111-n7o5qnpn9gns3m0nf75dk72tfton7239.apps.googleusercontent.com"
                                                 buttonText="Continue With Google"
@@ -120,20 +116,13 @@ function Auth() {
                                                 onFailure={responseFailureGoogle}
                                                 cookiePolicy={'single_host_origin'}
                                                 />
-                                    {/* <GoogleButton className="googleLogin"
-                                        onClick={responseSuccessGoogle}
-                                    /> */}
-                                            {/* <button className="social" onClick={handleGoogle}> <i className="fas fa-lock"></i> Google</button> */}
-                                            {/* <       button className="social">  <i className="fas fa-lock"></i> Facebook</button> */}
                                         </div>
-                                        
-
                                         <div className="text sign-up-text">Don't have an account?<br /> <label htmlFor="flip">SIGN UP NOW</label></div>
                                     </div>
                                 </form>
                             </div>
                             <div className="signup-form">
-                                            <Link to={'/'}><i className='fas fa-arrow-left'></i>Back</Link>
+                                            <Link to={'/'}><i className='fas fa-arrow-left'></i>Home</Link>
                                 <div className="title">SIGN UP</div>
                                 <form action="#">
                                     <div className="input-boxes">
@@ -146,16 +135,17 @@ function Auth() {
                                             <i className="fas fa-envelope"></i>
                                             <input type="text" placeholder="Enter your email" onChange={(e)=>setRegisterEmail(e.target.value)} required={true} />
                                         </div>
-                                        <div className="input-box">
+                                        <div className="input-box passwordBox">
                                             <i className="fas fa-lock"></i>
-                                            <input type="password" placeholder="Enter your password" onChange={(e)=>setRegisterPassword(e.target.value)} required={true} />
+                                            <input type={showPass ? 'text' :'password'} placeholder="Enter your password" onChange={(e)=>setRegisterPassword(e.target.value)} required={true} />
+                                            <i className={showPass ? 'fa fa-eye eyeIcon' : 'fa fa-eye-slash eyeIcon'} onClick={()=>{setShowPass(!showPass)}}></i>
                                         </div>
                                         <div className="button input-box">
                                             <input type="button" value="Submit" onClick={handleRegister} />
                                         </div>
                                         <div className="socialBox googleButtonContainer">
                                                 <GoogleLogin  className="googleLogin input-box"
-                                                clientId="746130167111-n7o5qnpn9gns3m0nf75dk72tfton7239.apps.googleusercontent.com"
+                                                clientId="570279389073-emdgbvuvp9ecienislbuelg2q6vd42is.apps.googleusercontent.com"
                                                 buttonText="Continue With Google"
                                                 onSuccess={responseSuccessGoogle}
                                                 onFailure={responseFailureGoogle}

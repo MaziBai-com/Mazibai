@@ -47,13 +47,13 @@ function Book() {
               seterror('Success. Your request has been received'); 
               setTimeout(() => {
                 seterror(''); 
-              }, 10000);
+              }, 3000);
 			      }
             else{
               seterror(data.msg); 
               setTimeout(()=> {
                 seterror(''); 
-              },10000)
+              },3000)
             }
 		})
 	}

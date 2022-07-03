@@ -16,13 +16,13 @@ function Navbar() {
         <nav>
 			<i className='bx bx-menu' onClick={()=>setsidebarShow(!sidebarShow)} ></i>
 			<form>
-				<div className="form-input">
+				{/* <div className="form-input">
 					<input type="search" placeholder="Search..."/>
 					<button type="button" className="search-btn"><i className='bx bx-search'></i></button>
-				</div>
+				</div> */}
 			</form>
-			<input type="checkbox" id="switch-mode" hidden={true}/>
-			<label htmlFor="switch-mode" onClick={()=>setTheme(!theme)}  className="switch-mode"></label>
+			{/* <input type="checkbox" id="switch-mode" hidden={true}/>
+			<label htmlFor="switch-mode" onClick={()=>setTheme(!theme)}  className="switch-mode"></label> */}
 			<Link to="/dashboard/notifications" className="notification">
 				<i className='bx bxs-bell'></i>
 				<span className="num">{notifications.length}</span>

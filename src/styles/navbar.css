@@ -45,7 +45,8 @@ a {
     background-color: #064e9b;}
 
 .site-navbar-top {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+height:60px; }
 
 .site-navbar {
   margin-bottom: 0px;

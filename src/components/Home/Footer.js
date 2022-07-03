@@ -17,7 +17,6 @@ function Footer() {
       <div className="content">
         <div className="top">
           <div className="logo-details">
-            <i className="fab fa-slack"></i>
             <span className="logo_name">MaziBai</span>
           </div>
 
@@ -26,33 +25,32 @@ function Footer() {
           <ul className="box" style={footerStyle}>
             <li className="link_name">Company</li>
             <li><a href="#">Home</a></li>
-            <li><a href="tel:">Contact us</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="tel:9511836323">Contact us</a></li>
+            <li><Link to={'/about'}>About us</Link></li>
             <li><Link to="/auth" >Get started</Link></li>
           </ul>
-          <ul className="box"style={footerStyle}>
+          {/* <ul className="box"style={footerStyle}>
             <li className="link_name" >Services</li>
             <li><a href="#">Baby sitter</a></li>
             <li><a href="#">Coking</a></li>
             <li><a href="#">Cleaning</a></li>
             <li><a href="#">Elderly Care</a></li>
-          </ul>
-          <ul className="box" style={footerStyle}>
+          </ul> */}
+          {/* <ul className="box" style={footerStyle}>
             <li className="link_name">Account</li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">My account</a></li>
             <li><a href="#">Prefrences</a></li>
 
-          </ul>
+          </ul> */}
 
 
-          <ul className="box" style={footerStyle}>
+          {/* <ul className="box" style={footerStyle}>
             <li className="link_name ">Location</li>
-            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238130.11877536518!2d78.93242410447118!3d21.161028197938382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1648670766558!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
             <iframe className="m"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238130.11877536518!2d78.93242410447118!3d21.161028197938382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1648670766558!5m2!1sen!2sin"
               allowFullScreen="" loading="lazy"></iframe>
-        </ul>
+        </ul> */}
         </div>
       </div>
       <div className="bottom-details">

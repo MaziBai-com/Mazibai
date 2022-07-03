@@ -1,5 +1,5 @@
-// export  const backendUrl = `https://mazibai.herokuapp.com/`
-export  const backendUrl = `http://localhost:5000/`
+export  const backendUrl = `https://mazibai.herokuapp.com/`
+// export  const backendUrl = `http://localhost:5000/`
 export  const authLoginUrl = `${backendUrl}api/auth/user/login`
 export  const authRegisterUrl  = `${backendUrl}api/auth/user/register`
 export  const googleLogin = `${backendUrl}api/auth/user/googlelogin`  

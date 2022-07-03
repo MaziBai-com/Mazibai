@@ -35,6 +35,8 @@ function Sidebar() {
 			<li className={location.pathname==='/dashboard/book' ? 'active' : '' }>
 				<Link   to="/dashboard/book" >
 					<i className='bx bxs-group'></i>
+					{/* <span class="iconify" data-icon="bi:cart-check-fill"></span> */}
+					{/* <i class="fa-solid fa-cart-circle-arrow-up"></i> */}
 					<span className="text">Book Now</span>
 				</Link>
 			</li>
@@ -46,7 +48,7 @@ function Sidebar() {
 			</li>
 			<li className={location.pathname==='/dashboard/notifications' ? 'active' : ''}>
 				<Link   to="/dashboard/notifications">
-					<i className='bx bxs-message-dots'></i>
+					<i className='bx bxs-bell'></i>
 					<span className="text">Notifications</span>
 				</Link>
 			</li>

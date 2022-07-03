@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import UserImage from "../../images/img1.jpg";
+// import UserImage from "../../images/img1.jpg";
 import "../../styles/DashboardCSS.css"
 function DashboardMain() {
 	const [state, setstate] = useState(1)
@@ -146,7 +146,7 @@ function DashboardMain() {
 							<div className="dashboardHeader">
 								<h3>Services</h3>
 							</div>
-							<div className="reviews">
+							{/* <div className="reviews">
 								<input type="radio" name="star" id="29"   />
 								<input type="radio" name="star" id="28" defaultChecked  />
 								<input type="radio" name="star" id="27"   />
@@ -157,7 +157,7 @@ function DashboardMain() {
 								<input type="radio" name="star" id="22" />
 								<input type="radio" name="star" id="21" />
 								<input type="radio" name="star" id="20" />
-							</div>
+							</div> */}
 						</div>
 						<hr />
 						<div className="dashboardData text">
@@ -172,7 +172,7 @@ function DashboardMain() {
 												<h4 key={index}>
 													{item.title}
 												</h4>
-												<li>
+												<li style={{marginBottom:'30px'}}>
 												{item.desc}
 												</li>
 											</div>

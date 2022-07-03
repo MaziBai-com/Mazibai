@@ -1,29 +1,29 @@
 import React , {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 import BG1 from "../../images/bg1.jpg"
-import BG2 from "../../images/bg2.jpg"
-import BG3 from "../../images/bg3.jpg"
-import BG4 from "../../images/bg4.jpg"
-import BG5 from "../../images/bg5.jpg"
+// import BG2 from "../../images/bg2.jpg"
+// import BG3 from "../../images/bg3.jpg"
+// import BG4 from "../../images/bg4.jpg"
+// import BG5 from "../../images/bg5.jpg"
 
 function Head() {
-  const [authToken , setauthToken] = useState(null);  
+  const [authToken , setauthToken] = useState(null);
   useEffect(() => {
-    let authToken = localStorage.getItem('MazibaiToken'); 
+    let authToken = localStorage.getItem('MazibaiToken');
     if(authToken){
-      setauthToken(authToken); 
+      setauthToken(authToken);
     }
   }, [])
-  
+
   return (
     <>
         <section className="head">
       <div className="bgslider">
         <img src={BG1} alt=""/>
-        <img src={BG2} alt=""/>
+        {/* <img src={BG2} alt=""/>
         <img src={BG3} alt=""/>
         <img src={BG4} alt=""/>
-        <img src={BG5} alt=""/>
+        <img src={BG5} alt=""/> */}
       </div>
       <div className="animation-area">
         <div className="wilson">
@@ -31,12 +31,14 @@ function Head() {
           <div className="banner-text">
             <h1 className="logoName mt-5">MaziBai.com</h1>
             <p className="logoTagLine">Redefining Home Services</p>
-            <p className="logoCaption" style={{fontSize:'30px'}}>We Provide Customised , Personalised , Home Services at affordable rates.</p>
+            <p className="logoCaption" style={{fontSize:'25px'}}>We Provide Customised {'&'} Personalised Home Services At Affordable Rates.</p>
             <div className="banner-btn btnContainer">
               <Link to={'/auth'}><span></span>Login</Link>
+              {
+                authToken &&
+                <Link to={'/dashboard/main'}><span></span>Dashboard</Link>
+              }
 
-              <Link to={authToken ? '/dashboard/main' : '/auth'}><span></span>Dashboard</Link>
-              
               <Link to={'/book'}><span></span>Book Now</Link>
             </div>
 

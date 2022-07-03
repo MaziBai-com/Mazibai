@@ -128,7 +128,8 @@ function DashboardProfile() {
 							
 							}
 					<form  id="formForImage" encType='multipart/form-data'>
-							<label htmlFor='photo'><i className='bx bxs-image-add'></i></label>
+					{/* <i class="fas fa-edit"></i> */}
+							<label htmlFor='photo' style={{height:'30px',width:'30px'}}><i className='fas fa-plus'></i></label>
                             <br />
 							<input
 								type="file"

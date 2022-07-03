@@ -1,14 +1,20 @@
-import React , {useEffect , useState} from 'react'
+import React , {useContext, useEffect , useState} from 'react'
 import { Link } from 'react-router-dom';
+import { backendUrl } from '../../urls';
+import AuthContext from '../../Context/AuthContext';
 import "../../styles/navbar.css"
 import Extras from './Extras';
 
 function Navbar() {
   const [show , setshow ]  = useState(false); 
   const [style , setstyle ]  = useState({backgroundColor:'#007bff'});
-
+  const {user} = useContext(AuthContext);
   const [others , setothers] = useState(0); 
-
+  const [authToken , setauthToken] = useState('');
+  useEffect(()=> {
+    let authToken = localStorage.getItem('MazibaiToken');
+    setauthToken(authToken);  
+  })
   useEffect(() => {
     window.addEventListener('resize',()=>{
       if(window.screen.width > 990 ) {
@@ -70,6 +76,12 @@ function Navbar() {
                 <a  href='/' onClick={(e)=>setNumber(e,1)} className="p-2  pl-3 pr-3 ml-3 btns togglerefer"><span>Want Job</span></a>
                 <a href="/" onClick={(e)=>setNumber(e,2)} className="p-2  pl-3 pr-3 ml-3  btns togglewant"><span>Refer Maid</span></a>
                 <a href="/" onClick={(e)=>setNumber(e,3)} className="p-2  pl-3 pr-3 ml-3 btns toggler "><span> Register as Partner</span></a>
+                {
+                  authToken && 
+                  <Link  to={'/dashboard/main'}>
+                    <img src={`${backendUrl}${user.userImg}`} style={{height:'35px',width:'35px',borderRadius:'50%',marginLeft:'60px'}} alt='user img' />
+                  </Link>
+                }
               </div>
             </div>
             <div className="col-2 ">  
@@ -180,9 +192,10 @@ function Navbar() {
                       <li className="togglerefer"><a href="#refer" className="nav-link border-btn">Refer a Maid</a></li>
                       <li className="togglewant"><a href="#job" className="nav-link border-btn">Want a Job</a></li>
                       <li className="toggler"><a href="#partner" className="nav-link border-btn ">Register as Partner</a></li>
-                      <li>
-                        <div id="google_translate_element"></div>
-                      </li>
+                      {/* <li>
+                        <img src='' alt='User img'  />
+                      </li> */}
+                      
 
                     </div>
                   </ul>

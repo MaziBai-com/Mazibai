@@ -12,7 +12,7 @@ function WhatWeDo() {
             <div className="col-sm-8 col-sm-offset-2">
               <h2>What we do?</h2>
               <hr/>
-              <span className="bgcolor H6">We Provide Customised , Personalised , Home Services at affordable
+              <span className="bgcolor H6">We Provide Customised {'&'} Personalised Home Services at affordable
                 rates.</span>
             </div>
           </div>
@@ -21,7 +21,6 @@ function WhatWeDo() {
           <div className="col-md-12 without-padding">
             <div className="left-features-services">
               <ul className="features-list">
-
                 <li>
                   <div className="left-features-box animated out" data-animation="fadeInLeft" data-delay="0">
                     <span className="iconbox"><i className="fa fa-coffee"></i></span>
@@ -76,7 +75,7 @@ function WhatWeDo() {
                   <div className="right-features-box animated out" data-animation="fadeInRight" data-delay="0">
                     <span className="iconbox"><i className="fas fa-wheelchair"></i></span>
                     <div className="features-box-content">
-                      <h6>Carefull & Nurturing
+                      <h6>Careful & Nurturing
                         Elder Care</h6>
                     </div>
                   </div>
@@ -104,7 +103,7 @@ function WhatWeDo() {
                   <div className="right-features-box animated out" data-animation="fadeInRight" data-delay="0">
                     <span className="iconbox"><i className="fas fa-tshirt"></i></span>
                     <div className="features-box-content">
-                      <h6>Neat & Clean Cloths Washing/Laundry</h6>
+                      <h6>Neat {'&'} Clean Clothes Washing/Laundry</h6>
                     </div>
                   </div>
                 </li>

@@ -8,19 +8,18 @@ function Cards() {
         <span className="green fs-3 fw-2" style={{backgroundColor:'#d02f9c',color:'white',padding:'5px',margin:'10px',borderRadius:'4px'}}>Neat, Clean & Hygienic Services</span>
         <div className="usp" style={{marginTop:'30px'}}>
           <div className="inner justify-content-center">
-            <div className="common__inner inner1" style={{height:'max-content'}}>
+            <div className="common__inner inner1" style={{height:''}}>
               <div className="img">
                 <i className="fas fa-handshake fs-5 white"></i>
               </div>
-              <div className="title" style={{marginBottom:'10px'}}>
+              <div className="title" style={{paddingBottom:'20px',display:'flex',alignItems:'center',justifyContent:'center'}}>
                 365 DAYS SERVICE
               </div>
               <div className="desc">
                 We provide 365 days and 24/7 services if needed, maid replacement in case your regular maid is on leave.
                 We provide 1, 2 days 1, 2 weeks or 1, 2 months maid/manpower services if needed.
               </div>
-              <div className="button">
-              </div>
+
             </div>
             <div className="common__inner inner2" style={{height:'max-content'}}>
               <div className="img">
